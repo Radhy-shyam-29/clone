@@ -578,7 +578,6 @@ progress::-webkit-progress-value {
     font-size: 30px;
     font-weight: normal;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 
@@ -658,4 +657,118 @@ progress::-webkit-progress-value {
     flex-direction: column;
     gap: 5px;
     margin: 20px 20px 20px 0;
+}
+
+.insta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px;
+    flex-wrap: wrap; 
+}
+
+.insta .instafeed{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.insta .username{
+    font-size: 1em;
+    color: white;
+}
+
+.gridimg{
+    display: grid;
+    grid-template-columns: repeat(6, 0fr);
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gridimg img{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gridimg img:hover{
+    transform: scale(1.04);
+}
+
+.gridimg .grid1{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    width: 500px;
+    height: 500px;
+}
+
+.parah{
+    color: rgb(203, 198, 198);
+    font-size: 20px;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    padding : 50px 0 0 50px;
+}
+
+.parah .bold{
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    padding: 30px 0 30px 0;
+}
+
+.footer{
+    margin: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 100px;
+    background: linear-gradient(to right, #20242c, #2c0e13);
+    /* flex-wrap: wrap; */
+    flex: 1;
+
+}
+
+.footer .footerlogo img{
+    width: 125px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.footer .links ul{
+    color: white;
+    font-size: 30px;
+}
+
+
+.footer .links li a{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(194, 184, 184);
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.footer .links li a:hover{
+    color: white;
+}
+
+.footer .links li{
+    font-size: 20px;
+    color: white;
+    list-style: none;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
