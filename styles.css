@@ -685,7 +685,7 @@ progress::-webkit-progress-value {
     gap: 2px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill);
 }
 
 .gridimg img{
@@ -730,8 +730,7 @@ progress::-webkit-progress-value {
     gap: 20px;
     padding: 100px;
     background: linear-gradient(to right, #20242c, #2c0e13);
-    /* flex-wrap: wrap; */
-    flex: 1;
+    flex-wrap: wrap;
 
 }
 
