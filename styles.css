@@ -1,4 +1,34 @@
 /* General Reset */
+
+.heading {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 30px 0;
+    position: relative;
+    text-align: center;
+  }
+  
+  .heading::before,
+  .heading::after {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 90px;
+  }
+  
+  .heading::before {
+    margin-right: 10px;
+    right: 100%;
+  }
+  
+  .heading::after {
+    left: 100%;
+    margin-left: 10px;
+  }
 * {
     margin: 0;
     padding: 0;
@@ -15,16 +45,15 @@ body{
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    /* background-color: black; */
+    justify-content: space-around;
     background: linear-gradient(to right, #20242c, #2c0e13);
-    height: 112px;
+    padding: 20px;
 }
 
 /* Logo */
 .navbar .logo img {
-    width: 74px;
-    height: 65px;
+    width: auto;
+    height: 75px;
     cursor: pointer;
 
 }
@@ -34,27 +63,27 @@ body{
 .search-container {
     display: flex;
     /* align-items: center; */
-    background: #f1f1f1;
+    background: #ffffff;
     border-radius: 0px 15px 15px 0px ;
     padding: 5px;
-    width: 1000px;
+    flex: 1;
+    width: 100%;
 }
 
 .dropdown-btn {
     background: #d9d9d9;
     border: none;
     border-radius: 15px 0px 0px 15px;
-    padding: 16px;
+    padding: 15px;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    /* display: flex;
-    align-items: center; */
 }
 
 
 .search-bar2{
     display: flex;
+    flex: 0.5;
 }
 
 
@@ -63,13 +92,11 @@ body{
     border: none;
     outline: none;
     padding: 8px;
-    /* padding-left: 50px; */
     font-size: 16px;
-    background: transparent;
 }
 
 .search-btn {
-    background: #f1f1f1;
+    background: #ffffff;
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -80,7 +107,6 @@ body{
 /* User & Cart */
 .user-cart {
     display: flex;
-    align-items: center;
     gap: 20px;
     color: white;
 }
@@ -108,10 +134,10 @@ body{
 .nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px 60px;
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex: 0.1;
     font-weight: bold;
-    position: relative;
 }
 
 .nav-links a:hover {
@@ -122,7 +148,7 @@ body{
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
     .search-container {
@@ -131,13 +157,14 @@ body{
 
     .nav-links {
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
     }
 
     .nav-links a {
         width: 100%;
         text-align: center;
     }
+
 }
 
 .img2{
@@ -147,6 +174,8 @@ body{
 }
 
 #bestseller{
+    /* height: 500px;
+    width: 500px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,38 +184,52 @@ body{
 }
 
 .line{
-    width: 100px;
-    height: 2px;
+    width: auto;
+    height: auto;
     background: white;
 }
 
 #bestseller h2{
+    text-align: center;
     color: white;
     font-size: 30px;
     font-weight: normal;
-    line-height: 100px;
 
 }
 
 .thirdimg{
-    width: 80%;
-    height: 250px;
-    background-image: url(/photos/third.png);
-    background-size: cover;
-    background-position: 0% 40%;
-    border-radius: 25px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-left: 10%;
+    margin: auto; 
+    border-radius: 25px;
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    
+}
 
+.option{
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.thirdimg img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 25px;
 }
 
 .thirdimg p{
+    max-width: 50px;
     color: white;
     font-size: 40px;
     font-weight: normal;
-    margin-left: 100px;
 }
 
 .thirdimg button{
@@ -197,7 +240,8 @@ body{
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin-right: 100px;
+    
+
 }
 
 .cards-for-protien-box{ 
@@ -273,39 +317,6 @@ body{
     font-weight: normal;
     line-height: 100px;
 
-}
-
-
-.fourthimg{ 
-    width: 80%;
-    height: 250px;
-    background-image: url(/photos/fourth.png);
-    background-size: cover;
-    background-position: 0% 52%;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10%;
-
-}
-
-.fourthimg p{
-    color: white;
-    font-size: 40px;
-    font-weight: normal;
-    margin-left: 100px;
-}
-
-.fourthimg button{
-    background: transparent;
-    border: 1px solid white;
-    padding: 10px 20px;
-    border-radius: 35px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 100px;
 }
 
 
@@ -385,40 +396,6 @@ body{
     line-height: 100px;
 
 }
-
-
-.fiveimg{ 
-    width: 80%;
-    height: 250px;
-    background-image: url(/photos/fiveimg.png);
-    background-size: cover;
-    background-position: 0% 52%;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10%;
-
-}
-
-.fiveimg p{
-    color: white;
-    font-size: 40px;
-    font-weight: normal;
-    margin-left: 100px;
-}
-
-.fiveimg button{
-    background: transparent;
-    border: 1px solid white;
-    padding: 10px 20px;
-    border-radius: 35px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 100px;
-}
-
 
 .cards-for-protien-box{ 
     display: flex;
@@ -721,28 +698,31 @@ progress::-webkit-progress-value {
     font-size: 30px;
     padding: 30px 0 30px 0;
 }
+/* footer area */
+
 
 .footer{
-    margin: 50px 0 0 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 100px;
     background: linear-gradient(to right, #20242c, #2c0e13);
     flex-wrap: wrap;
+    margin: 100px 0 0 0;
+    padding: 150px;
+    height: auto;
+    width: 100%;
+    justify-content: space-evenly;
 
 }
 
 .footer .footerlogo img{
-    width: 125px;
-    height: 100px;
+    width: 75px;
+    height: auto;
     cursor: pointer;
 }
 
-.footer .links ul{
+.footer .links {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 
@@ -751,8 +731,7 @@ progress::-webkit-progress-value {
     list-style: none;
     color: rgb(194, 184, 184);
     display: flex;
-    gap: 20px;
-    font-size: 20px;
+    font-size: 20px ;
 }
 
 .footer .links li a:hover{
@@ -760,14 +739,13 @@ progress::-webkit-progress-value {
 }
 
 .footer .links li{
-    font-size: 20px;
-    color: white;
+    font-size: 20px ;
+
+    color: rgb(194, 184, 184);
     list-style: none;
 }
 
 .footer .links{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
