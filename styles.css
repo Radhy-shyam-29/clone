@@ -43,6 +43,8 @@ body{
 
 /* Navbar Container */
 .navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -126,7 +128,8 @@ body{
 
 /* Navigation Links */
 .nav-links {
-    /* position: fixed; */
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: center;
     background: linear-gradient(to right, #20242c, #2c0e13);
@@ -726,70 +729,85 @@ progress::-webkit-progress-value {
     font-size: 30px;
     padding: 30px 0 30px 0;
 }
-/* footer area */
+/* new footer here -------------- */
+/* footer area */ 
 
-
-.footer{
+.mainfooter{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     height: auto;
     width: 100%;
     background: linear-gradient(to right, #20242c, #2c0e13);
     margin: 100px 0 0 0;
-    padding: 150px 0 0 0;
+    padding-top: 100px;
+    gap: 20px;
 
 }
-
-.footer .footerlogo img{
-    width: 100px;
+.footer{
+    display: flex;
+        flex-wrap: wrap;
+    justify-content: center;
     height: auto;
+    width: 100%;
+    gap: 20px;
+} 
+
+
+.footer .footerlogo {
+    width: auto;
+    max-width: 150px;
+    height: 100px;
     cursor: pointer;
 }
 
-.footer .links {
+.link .name{
+    font-size: 1.5em;
     color: white;
-    font-size: 25px;
-    display: flex;
-    gap: 30px;
-    line-height: 35px;
 }
 
 
-.footer .links li a{
+.link li{
+    list-style: none;
+    font-size: 1em;
+}
+
+.link li a{
     text-decoration: none;
-    list-style: none;
-    color: rgb(194, 184, 184);
-    display: flex;
-    font-size: 20px ;
+    color: grey; 
+    font-size: 1.2em;
+
 }
 
-.footer .links li a:hover{
+.community .name{
+    font-size: 1.5em;
     color: white;
 }
 
-.footer .links li{
-    font-size: 20px ;
-
-    color: rgb(194, 184, 184);
-    list-style: none;
+ .link .size{
+    font-size: 1.2em;
 }
+
+
+ .link li a:hover{
+    color: white;
+}
+
 
 .community{
     display: flex;
     flex-direction: column;
     max-width: 400px;
+    width: 100%;
     flex-wrap: wrap;
 
  }
 
-
- .emaildiv{
+ .emaildiv-link{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     padding-top: 35px;
 }
 .email{
@@ -797,10 +815,10 @@ progress::-webkit-progress-value {
     background-color: transparent;
     padding: 4px;
     width: 100%;
+    max-width: 400px;
     border-bottom: 1px solid white;
     color: white;
     font-size: 16px;
-    
 }
 .email-icon{
     background-color: transparent;
@@ -808,9 +826,11 @@ progress::-webkit-progress-value {
     border: none;
     cursor: pointer;
     font-size: 1.4em;
+    /* position: absolute; */
+
     
 }
-.socialmedia button{
+.socialmedia{
     background-color: transparent;
     color: white;
     border: none;
@@ -824,6 +844,16 @@ progress::-webkit-progress-value {
 
 }
 
+
+
+ @media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    } }
+
+
+
 .lastline{
     width: 100%;
     max-width: 1600px;
@@ -833,19 +863,15 @@ progress::-webkit-progress-value {
     
 }
 
-
-.footer-last-session li{
+.services{
+    display: flex;
+    justify-content: center;
+}
+.services li{
     list-style: none;
     color: white;
     font-size: 1em;
     padding: 30px;
-}
-
-.product-features{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 .copyright{
