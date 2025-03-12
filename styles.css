@@ -703,19 +703,20 @@ progress::-webkit-progress-value {
 
 .footer{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    background: linear-gradient(to right, #20242c, #2c0e13);
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 100px 0 0 0;
-    padding: 150px;
     height: auto;
     width: 100%;
-    justify-content: space-evenly;
+    background: linear-gradient(to right, #20242c, #2c0e13);
+    margin: 100px 0 0 0;
+    padding: 150px 0 0 0;
 
 }
 
 .footer .footerlogo img{
-    width: 75px;
+    width: 100px;
     height: auto;
     cursor: pointer;
 }
@@ -723,6 +724,9 @@ progress::-webkit-progress-value {
 .footer .links {
     color: white;
     font-size: 25px;
+    display: flex;
+    gap: 30px;
+    line-height: 35px;
 }
 
 
@@ -745,7 +749,78 @@ progress::-webkit-progress-value {
     list-style: none;
 }
 
-.footer .links{
+.community{
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    max-width: 400px;
+    flex-wrap: wrap;
+
+ }
+
+
+ .emaildiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+}
+.email{
+    border: none;
+    background-color: transparent;
+    padding: 4px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 16px;
+    
+}
+.email-icon{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    
+}
+.socialmedia button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    
+}
+.socialmedia i{
+    font-size: 2em;
+    margin: 20px 20px 0 0px;
+    
+    cursor: pointer;
+
+}
+
+.lastline{
+    width: 100%;
+    max-width: 1600px;
+    border: 1px solid grey;
+    height: 1px;
+    margin-top: 50px;
+    
+}
+
+
+.footer-last-session li{
+    list-style: none;
+    color: white;
+    font-size: 1em;
+    padding: 30px;
+}
+
+.product-features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copyright{
+    color: white;
+    font-size: 1em;
 }
