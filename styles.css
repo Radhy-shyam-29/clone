@@ -48,6 +48,7 @@ body{
     justify-content: space-around;
     background: linear-gradient(to right, #20242c, #2c0e13);
     padding: 20px;
+    /* position: fixed; */
 }
 
 /* Logo */
@@ -125,6 +126,7 @@ body{
 
 /* Navigation Links */
 .nav-links {
+    /* position: fixed; */
     display: flex;
     justify-content: center;
     background: linear-gradient(to right, #20242c, #2c0e13);
@@ -655,32 +657,58 @@ progress::-webkit-progress-value {
     font-size: 1em;
     color: white;
 }
-
-.gridimg{
+.gridimg {
     display: grid;
-    grid-template-columns: repeat(6, 0fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive Grid */
+    gap: 5px;
+    padding: 10px;
+}
+.gridimg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive Columns */
     gap: 2px;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fill);
 }
 
-.gridimg img{
+/* All images */
+.gridimg img {
     object-fit: cover;
-    width: 250px;
+    width: 100%;
     height: 250px;
     transition: transform 0.3s ease-in-out;
 }
 
-.gridimg img:hover{
+/* Hover Effect */
+.gridimg img:hover {
     transform: scale(1.04);
 }
 
-.gridimg .grid1{
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-    width: 500px;
-    height: 500px;
+/* First Image (Bigger One) */
+.gridimg .grid1 {
+    grid-column: span 2;
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .gridimg {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tablet size */
+    }
+}
+
+@media (max-width: 768px) {
+    .gridimg {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Mobile size */
+    }
+
+    .gridimg .grid1 {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: auto;
+    }
 }
 
 .parah{
