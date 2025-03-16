@@ -254,7 +254,7 @@ top: 0px;
 }
 .siximg{
     margin: 50px;
-    background-image: url(/photos/siximg.png);
+    background-image: url(photos/siximg.png);
     background-position: 0% 52%;
     background-size: cover;
     width: 80%;
